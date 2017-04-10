@@ -1,13 +1,22 @@
-
 public class Author {
-	public void auth() {
-		String firstname = "Brown";
-		String lastname = "Red";
-		String city;
-		System.out.println("length of the authors firstName is : "
-				+ firstname.length()
-				+ "  and length of the authors lastName is : "
-				+ lastname.length());
+	String firstname;
+	String lastname;
+	String city;
+
+	public Author(String firstname, String lastname, String city) {
+		this.firstname = firstname;
+		this.lastname = lastname;
+		this.city = city;
+	}
+
+	public int nameLength() {
+		return firstname.length() + lastname.length();
+	}
+
+	@Override
+	public String toString() {
+		return "Author [firstname=" + firstname + ", lastname=" + lastname
+				+ ", city=" + city + "]";
 	}
 
 }

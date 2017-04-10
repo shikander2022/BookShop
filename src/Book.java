@@ -1,50 +1,24 @@
 
 public class Book {
-	String author = "Green";
+
+	String author;
 	String title;
-	int books = 2;
-	public void bok() {
+	int length;
 
-		System.out
-				.println("For magazines it is the above multiplied by 12 is : "
-						+ author.length() * 12);
+	public Book(Author author, String title) {
+		this.author = author.toString();
+		this.length = author.nameLength();
+		this.title = title;
 	}
 
-	public void dollar() {
-		System.out.println("ElectornicBooks it is 1 dollar is : "
-				+ author.length() * 1);
-	}
-
-	public Book() {
-
-	}
-
-	public Book(String author, int books) {
-		super();
-		this.author = author;
-		this.books = books;
-		// for(int v=0;v<author.length();v++);
-		// System.out.println("Iterate book" + v);
-	}
-
-	public String getAuthor() {
-		return author;
-	}
-
-	public void setAuthor(String author) {
-		this.author = author;
-	}
-
-	public int getBooks() {
-		return books;
-	}
-
-	public void setAuthor(int books) {
-		this.books = books;
+	public double calculatePrice() {
+		return length;
 	}
 
 	@Override
 	public String toString() {
-		return "[author:" + author + ", books:" + books + "]";
+		return "Book [author=" + author + ", title=" + title + ", length="
+				+ length + "]";
 	}
+
 }
