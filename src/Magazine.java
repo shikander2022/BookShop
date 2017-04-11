@@ -3,6 +3,8 @@ public class Magazine extends Book {
 
 	Publisher publisher;
 
+	// For Magazine
+
 	public Magazine(Author author, String title, Publisher publisher) {
 		super(author, title);
 		this.publisher = publisher;
